@@ -1,7 +1,7 @@
 @import "variables";
 
 .calendar {
-  width: 715px;
+  width: (7 * $date-block-width) + 20*($gaps);
   display: flex;
   flex-wrap: wrap;
   margin: 50px auto;
@@ -12,9 +12,9 @@
     box-sizing: border-box;
     background-color: #eee;
     text-align: center;
-    line-height: 100px;
-    width: 100px;
-    height: 100px;
+    line-height: $date-block-height;
+    width: $date-block-width;
+    height: $date-block-height;
     border: 1px solid black;
     margin-bottom: 1px;
     margin-right: 1px;
@@ -32,5 +32,5 @@
 }
 
 .calendar :first-child {
-  margin-left: #{$first-month-day}px;
+  margin-left: ($first-month-day*$date-block-width)+$first-month-day*$gaps ;
 }

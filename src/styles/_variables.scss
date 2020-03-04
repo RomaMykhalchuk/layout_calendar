@@ -1,11 +1,14 @@
-$day-of-the-week:fri;
+$date-block-width:100px;
+$date-block-height:100px;
+$day-of-the-week: sat;
 $day-in-month:30;
+$gaps: 1px;
 $first-month-day: map-get((
   mon:0,
-  tue:101,
-  wed:202,
-  thu:303,
-  fri:404,
-  sat:505,
-  sun:606
+  tue:1,
+  wed:2,
+  thu:3,
+  fri:4,
+  sat:5,
+  sun:6
 ), $day-of-the-week);
