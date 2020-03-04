@@ -1,5 +1,5 @@
 .calendar {
-  width: 715px;
+  width: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,6 +608,6 @@
     cursor: pointer; }
 
 .calendar :first-child {
-  margin-left: 404px; }
+  margin-left: 101px; }
 
 /*# sourceMappingURL=calendar.css.map */
