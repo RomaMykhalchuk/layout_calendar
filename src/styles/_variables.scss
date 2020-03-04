@@ -1,0 +1,11 @@
+$day-of-the-week:fri;
+$day-in-month:30;
+$first-month-day: map-get((
+  mon:0,
+  tue:101,
+  wed:202,
+  thu:303,
+  fri:404,
+  sat:505,
+  sun:606
+), $day-of-the-week);
