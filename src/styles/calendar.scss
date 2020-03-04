@@ -7,8 +7,8 @@
   margin: 50px auto;
 }
 
-@for $date from 1 through $day-in-month {
-  .calendar :nth-child(#{$date}) {
+@for $date from 1 through 31 {
+  .calendar div:nth-child(#{$date}) {
     box-sizing: border-box;
     background-color: #eee;
     text-align: center;
@@ -27,10 +27,19 @@
       background-color: #f5c4cc;
       left: 0;
       cursor: pointer;
+      transition: 0.5s;
     }
   }
 }
 
-.calendar :first-child {
-  margin-left: ($first-month-day*$date-block-width)+$first-month-day*$gaps ;
+@each $day-of-week,$num in $first-month-day {
+  .calendar-#{$day-of-week} div:first-child {
+    margin-left: #{$num*$date-block-width+$gaps*$num};
+  }
+}
+
+@each $length,$num in $days-in-month {
+  .calendar-#{$length} div:nth-child(n+#{$num}) {
+    display: none;
+  }
 }

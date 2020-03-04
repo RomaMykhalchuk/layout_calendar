@@ -1,9 +1,7 @@
 $date-block-width:100px;
 $date-block-height:100px;
-$day-of-the-week: sat;
-$day-in-month:30;
 $gaps: 1px;
-$first-month-day: map-get((
+$first-month-day:(
   mon:0,
   tue:1,
   wed:2,
@@ -11,4 +9,9 @@ $first-month-day: map-get((
   fri:4,
   sat:5,
   sun:6
-), $day-of-the-week);
+);
+$days-in-month:(
+  "28":29,
+  "29":30,
+  "30":31,
+);
